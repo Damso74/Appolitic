@@ -11,17 +11,22 @@ import {
   LinkedinIcon,
   WhatsappIcon,
 } from 'react-share';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Header = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleIconClick = () => {
     navigate('/results');
   };
 
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    setCopied(false);
+  };
 
   const shareUrl = window.location.href;
   const title = "Découvrez vos affinités politiques avec Appolitic ! 🗳️ Venez comparer vos résultats avec les miens et participez au débat ! #Appolitic #Politique";
@@ -80,7 +85,7 @@ const Header = () => {
           <Typography id="modal-title" variant="h6" component="h2" gutterBottom>
             Partager sur :
           </Typography>
-          <Box display="flex" justifyContent="center">
+          <Box display="flex" justifyContent="center" mb={2}>
             <FacebookShareButton url={shareUrl} quote={title}>
               <FacebookIcon size={48} round />
             </FacebookShareButton>
@@ -101,6 +106,17 @@ const Header = () => {
               <WhatsappIcon size={48} round />
             </WhatsappShareButton>
           </Box>
+
+          {/* Lien URL copiable */}
+          <Typography variant="body1" gutterBottom>
+            Ou copiez ce lien pour partager :
+          </Typography>
+          <CopyToClipboard text={shareUrl} onCopy={() => setCopied(true)}>
+            <Button variant="outlined" color={copied ? "success" : "secondary"} fullWidth>
+              {copied ? "Lien copié !" : shareUrl}
+            </Button>
+          </CopyToClipboard>
+
           <Button onClick={handleClose} variant="outlined" color="secondary" style={{ marginTop: '16px' }}>
             Fermer
           </Button>
