@@ -1,0 +1,72 @@
+.results-container {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px; /* Ensure logo has a controlled margin */
+}
+
+.custom-button {
+    background-color: #7f7786 !important;
+    color: #FFFFFF !important;
+}
+
+.custom-button.secondary-button {
+    background-color: #b8908f !important;
+    color: #FFFFFF !important;
+}
+
+.custom-button:hover {
+    background-color: #B19CD9 !important;
+}
+
+.custom-button:active {
+    background-color: #6f6677 !important;
+}
+
+.party-logo {
+    width: 80px;
+    height: auto;
+}
+
+.recharts-bar-rectangle {
+    stroke: #FFFFFF;
+}
+
+.recharts-pie-label {
+    fill: #333333;
+    font-size: 14px;
+}
+
+.category-summary {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-summary h6 {
+    color: #7f7786;
+    margin-bottom: 10px;
+}
+
+.category-summary p {
+    margin: 5px 0;
+}
+
+/* Additional adjustments to reduce space */
+.assembly-chart-container {
+    margin-top: 0px; /* Adjust the space above the chart */
+    margin-bottom: 10px; /* Adjust the space below the chart */
+    padding: 0; /* Ensure no extra padding */
+}
+
+.chart-description {
+    margin-top: 0px; /* Reduce space above the description */
+    margin-bottom: 0px; /* Reduce space below the description */
+}
