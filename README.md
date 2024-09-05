@@ -55,7 +55,7 @@ L'application sera accessible à l'adresse : `http://localhost:3000`
 
 - **Frontend** : React.js
 - **Backend** : Node.js avec Express.js
-- **Base de données** : MongoDB
+- **Base de données** : Excel
 - **Design** : Palette de couleurs mauve et gris clair pour une apparence moderne et professionnelle.
 
 ## Contribution
